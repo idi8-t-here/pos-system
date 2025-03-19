@@ -41,7 +41,7 @@ app.post("/create_payment_intent", async (req, res) => {
       amount: req.body.amount,
       currency: "usd",
       payment_method_types: ["card_present"],
-      capture_method: "automatic",
+      capture_method: "manual",
     });
     res.json(intent);
   } catch (error) {
